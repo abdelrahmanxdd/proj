@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-color: rgb(62,117,137);
+            width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 7px;
+            
+        }
+        
+        .content{
+            width: 100%;
+            padding: 10px;
+            
+        }
+
+        input{
+            width: 300px;
+            padding: 6px 10px;
+        }
+
+        #div2{
+            padding-left: 25px;
+        }
+
+       #div3 {
+        padding-left: 50px;
+        
+
+        label{
+            font-size: 24px;
+        }
+
+        span{
+            font-size: 24px;
+        }
+       }
+
+        button{
+           padding: 10px 15px;
+           background-color: cadetblue;
+           border: none;
+           border-radius: 7px;
+           
+        }
+
+        button:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        p{
+            padding-left: 50px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="content">
+        <label for="">From: </label>
+        <input type="text" id="myInput" placeholder="Enter celesius" >
+        <span>CM</span>
+        </div>
+
+        <div class="content" id="div2">
+        <label for="" id="label2">To: </label>
+        <input type="text" id="myInpu2" placeholder="fahrenheits" >
+        <span>fahrenheits</span>
+        </div>
+
+        <div class="content" id="div3">
+        <button onclick="C_to_F()"> Convert</button>
+        </div>
+        <p id="demo">Result: </p>
+        
+    </div>
+
+
+    <script >
+
+        
+
+    function C_to_F(){
+        let celsius = document.getElementById("myInput").value;
+        var fahrenheit = (celsius * 33.8)
+        document.getElementById("myInpu2").value = fahrenheit.toFixed(2);
+        document.getElementById("demo").innerHTML = `${celsius} celsius =  ${fahrenheit.toFixed(2)} fahrenheits`;
+        
+    }
+    </script>
+
+</body>
+</html>
